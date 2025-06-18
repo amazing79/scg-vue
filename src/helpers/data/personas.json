@@ -1,0 +1,25 @@
+{
+    "code": 200,
+    "message": "Listado de personas obtenidos correctamente",
+    "data": [
+        {
+            "idPersona": 1,
+            "apellido": "Jauregui",
+            "nombre": "Ignacio",
+            "apodo": "Nacho"
+        },
+        {
+            "idPersona": 2,
+            "apellido": "Montalva",
+            "nombre": "Diana",
+            "apodo": "La pochi"
+        },
+        {
+            "idPersona": 3,
+            "apellido": "Vidal",
+            "nombre": "Amanda",
+            "apodo": ""
+        }
+    ],
+    "totalFound": 3
+}

@@ -1,0 +1,39 @@
+{
+    "code": 200,
+    "message": "Categorias obtenidas con exito!",
+    "data": [
+        {
+            "idCategoria": 1,
+            "descripcion": "Servicios"
+        },
+        {
+            "idCategoria": 2,
+            "descripcion": "Impuestos"
+        },
+        {
+            "idCategoria": 3,
+            "descripcion": "Farmcia y Perfumerias"
+        },
+        {
+            "idCategoria": 4,
+            "descripcion": "Almacen y verdulerias"
+        },
+        {
+            "idCategoria": 5,
+            "descripcion": "Bancos"
+        },
+        {
+            "idCategoria": 9,
+            "descripcion": "Compra de divisas"
+        },
+        {
+            "idCategoria": 13,
+            "descripcion": "Combustibles"
+        },
+        {
+            "idCategoria": 14,
+            "descripcion": "Cuidado personal"
+        }
+    ],
+    "totalFound": 8
+}

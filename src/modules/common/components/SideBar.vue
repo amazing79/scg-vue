@@ -8,12 +8,18 @@
   import PersonsIcon from '../icons/PersonsIcon.vue';
   import LogOutIcon from '../icons/LogOutIcon.vue';
 
-
   const show = ref(false);
+  const MIN_RESOL = 801;
 
   const toogleMenu = () => {
-    show.value = !show.value;
+
+    if(screen.width < MIN_RESOL || window.innerWidth < MIN_RESOL) {
+      show.value = !show.value;
+    } else {
+      show.value = false;
+    }
   }
+
 </script>
 
 <template>

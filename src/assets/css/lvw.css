@@ -1,0 +1,99 @@
+.lvw-data{
+    min-height:300px;
+    --table_bg:#FFF;
+    --table_font_color:#EBEDEF;
+    --table_data_font_color: #373737;
+    --table_title_bg: #212F3D;
+    --table_title_font_color:#FFF;
+    --tr_over_bg: #97b2bc;
+    --tr_over_font_color: #9f3712;
+    --btn-primary-bg:#28b463;
+    --btn-txt:#FFF;
+    --btn-secondary-bg:#c0392b;
+}
+
+.table-data{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+table{
+    width: 100%;
+    color:var(--table_font_color);
+    background-color: var(--table_bg);
+}
+
+caption {
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+}
+
+table, thead, tbody{
+    border: solid 2px #000;
+    border-collapse: collapse;
+}
+
+tbody{
+    padding-top: 100px;
+    min-height: 100px;
+    color: var(--table_data_font_color);
+}
+
+thead{
+    background-color:var(--table_title_bg);
+    color: var(--table_title_font_color);
+    font-weight: bold;
+}
+
+th{
+    padding:10px;
+}
+
+tr td{
+    padding: 0 5px;
+    font-weight: bold;
+    border-bottom: solid 1px rgba(39, 55, 70, 0.8);
+    text-align: center;
+}
+
+tr{
+    width: 100%;
+}
+
+tbody > tr:hover,
+tbody > tr:hover:nth-of-type(even)
+{
+    background-color:var(--tr_over_bg);
+    color:var(--tr_over_font_color);
+}
+
+tbody > tr:nth-of-type(even) {
+    background-color: rgb(237 238 242);
+}
+
+.lvw__btn{
+  all: unset;
+}
+.icon i {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.title_actions{
+    text-align: center;
+    width: 30%;
+}
+
+.col_actions{
+    text-align: right;
+}
+
+.edit i {
+    color: #007bff;
+}
+
+.delete i {
+    color: #dc3545;
+}
