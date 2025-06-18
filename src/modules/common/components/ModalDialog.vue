@@ -3,8 +3,6 @@ import { ref, watch, onMounted } from "vue";
 
 const pDialog = ref(null);
 const emit = defineEmits(['closeModal'])
-
-
 const props = defineProps({
     show:{
         type:Boolean,
@@ -23,7 +21,6 @@ watch(() => props.show, (newValue) => {
        pDialog.value.close();
     }
 })
-
 // Emitir cierre si se cierra manualmente (ej. con ESC)
 onMounted(() => {
   pDialog.value.addEventListener('close', () => {
@@ -56,44 +53,43 @@ onMounted(() => {
     margin: 10% auto;
     border-radius: 8px;
     border: none;
-}
+  }
 
-.dialog__title{
-    width: 100%;
-    background-color: var(--bg-main-color);
-    text-align: center;
-    color: #2c237b;
-    padding: 4px;
-}
+  .dialog__title{
+      width: 100%;
+      background-color: var(--bg-main-color);
+      text-align: center;
+      color: #fafafa;
+      padding: 4px;
+  }
 
-.dialog__body{
-    padding: 10px;
-}
+  .dialog__body{
+      padding: 10px;
+  }
 
-::backdrop {
-    background-color: #23292e;
-    opacity: 0.75;
-}
+  ::backdrop {
+      background-color: #23292e;
+      opacity: 0.75;
+  }
 
-button{
-    all:unset;
-    color: #fafafa;
-    padding: 10px;
-    border-radius: 4px;
-    font-size: 16px;
-}
+  button{
+      all:unset;
+      color: #fafafa;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 16px;
+  }
 
-button.submit {
-    background-color: #007bff;
-}
+  button.submit {
+      background-color: #007bff;
+  }
 
-button.cancel {
-    background-color: #6c757d;
-}
+  button.cancel {
+      background-color: #6c757d;
+  }
 
-.button-panel{
-    display: flex;
-    justify-content: space-between;
-}
-
+  .button-panel{
+      display: flex;
+      justify-content: space-between;
+  }
 </style>

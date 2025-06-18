@@ -6,7 +6,6 @@
   import ModalDialog from '@/modules/common/components/ModalDialog.vue';
   import CategoriesForm from '../components/CategoriesForm.vue';
 
-
   const categories = ref([]);
   const show = ref(false);
   const data_cols = ['idCategoria', 'descripcion'];

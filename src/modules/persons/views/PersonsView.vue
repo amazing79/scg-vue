@@ -6,7 +6,6 @@
   import ModalDialog from '@/modules/common/components/ModalDialog.vue';
   import PersonasForm from '../components/PersonasForm.vue';
 
-
   const persons = ref([]);
   const show = ref(false);
   const data_cols = ['idPersona', 'apellido', 'nombre', 'apodo'];
