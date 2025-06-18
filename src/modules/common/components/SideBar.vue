@@ -1,18 +1,25 @@
 <script setup>
+  import {ref} from 'vue';
   import BillsIcon from '../icons/BillsIcon.vue';
   import HomeIcon from '../icons/HomeIcon.vue';
   import CategoriesIcon from '../icons/CategoriesIcon.vue';
   import PersonsIcon from '../icons/PersonsIcon.vue';
   import LogOutIcon from '../icons/LogOutIcon.vue';
+
+  const show = ref(false);
+
+  const toogleMenu = () => {
+    show.value = !show.value;
+  }
 </script>
 
 <template>
     <header>
-        <button id="btn_menu" class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <button @click="toogleMenu" class="menu-toggle"><i class="fas fa-bars"></i></button>
         <h1><i class="fas fa-piggy-bank"></i> - SCG</h1>
     </header>
-    <aside class="sidebar">
-      <nav>
+    <aside @click="toogleMenu" class="sidebar" :class="{show : show }">
+      <nav >
         <ul>
           <li>
             <router-link to="/">
