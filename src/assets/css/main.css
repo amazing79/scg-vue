@@ -116,7 +116,8 @@ button.cancel {
     background-color: #6c757d;
 }
 
-.user-form{
+.user-form,
+.category-form{
     display: flex;
     flex-direction: column;
     width: 100%;

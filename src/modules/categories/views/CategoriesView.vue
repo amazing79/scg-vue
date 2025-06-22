@@ -1,32 +1,32 @@
 <script setup>
-  import {ref, onMounted } from 'vue';
-  import { getCategorias } from '@/helpers/useCategorias';
+  import { ref } from 'vue';
+  import { useFetch } from '@/helpers/fetch.js';
   //components
   import ListView from '../../common/components/ListView.vue';
   import ModalDialog from '@/modules/common/components/ModalDialog.vue';
   import CategoriesForm from '../components/CategoriesForm.vue';
+  import LoaderView from '@/modules/common/components/LoaderView.vue';
 
-  const categories = ref([]);
+  const {data : categories, error } = useFetch('src/helpers/data/categorias.json');
+
   const show = ref(false);
   const data_cols = ['idCategoria', 'descripcion'];
-
-  onMounted(() => {
-    getCategorias()
-      .then(data => {
-        categories.value = data.data;
-      })
-      .catch(error => {
-      console.log(error.message);
-      })
-  })
 
 </script>
 
 <template>
   <h1>Categorias</h1>
-  <ListView :data="categories" :data_cols="data_cols"></ListView>
+  <div v-if="error">
+    <h3>No se pudo obtener las categorias: Ocurrio el error: {{ error.message }}</h3>
+  </div>
+  <div v-else-if="categories">
+  <ListView :data="categories.data" :data_cols="data_cols"></ListView>
   <button class="btn primary" @click="show = true">Add</button>
   <ModalDialog :show="show" @closeModal="show = false">
     <CategoriesForm></CategoriesForm>
   </ModalDialog>
+  </div>
+  <div v-else>
+    <LoaderView></LoaderView>
+  </div>
 </template>
