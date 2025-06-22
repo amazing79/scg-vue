@@ -18,7 +18,7 @@
 <template>
   <h1>Personas</h1>
   <div v-if="error">
-
+    <h3>No se pudo obtener las categorias: Ocurrio el error: {{ error.message }}</h3>
   </div>
   <div v-else-if="persons">
     <ListView :data="persons.data" :data_cols="data_cols"></ListView>
